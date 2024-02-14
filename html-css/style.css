@@ -1,0 +1,198 @@
+
+/*以下構造の大きさ*/
+
+#content {
+  background-color: #DFEAEA;
+}
+.contentwidth {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+}
+main {
+  width: 750px;
+}
+aside {
+  width: 320px;
+  margin-left: 30px;
+}
+footer {
+  height: 50px;
+  background-color: #777777;
+}
+
+/*以下ヘッダー部分*/
+
+header h1 {
+  width: 600px;
+  height: 80px;
+}
+header nav {
+  text-align: center;
+  background-image: linear-gradient(#4EBDD8, #BDEFFC);
+}
+header nav ul {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+header nav li {
+  display: inline-block;
+  list-style: none;
+  width: 24%;
+}
+header nav li a {
+  display: block;
+  padding: 10px;
+  font-weight: 800;
+}
+header nav li a:hover {
+  text-decoration: none;
+}
+header nav li:not(:last-child){
+  border-right: 1px solid #A7F4E3;
+}
+header nav a {
+  transition: all 0.3 ease 0s;
+}
+header nav a:hover {
+  opacity: 0.5;
+}
+
+/*main部分*/
+
+#content {
+  background-color: #EFF3F2;
+}
+.introduce {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  background: #FFFFFF;
+  border-left: double 7px #4ec4d3;
+  border-right: double 7px #4ec4d3;
+}
+.introduce h2 {
+  font-size: larger;
+  text-align: center;
+  opacity: 0.7;
+  padding-bottom: 0.2em;
+}
+main > h2 {
+  padding-left: 1em;
+}
+/*記事共通設定*/
+
+article {
+  height: 200px;
+  display: flex;
+  background-color: #FFFFFF
+}
+article .text-hyperlink h3 {
+  font-size: larger;
+  opacity: 0.7;
+  padding-bottom: 0.2em;
+}
+.article-sentence {
+  padding: 0.5em 1em;
+  position: relative;
+}
+article .date {
+  opacity: 0.7;
+  position: absolute;
+  right: 1em;
+  bottom: 0.1em;
+}
+article:nth-child(n+4) {
+  margin-top: 2em;
+}
+/*各々記事設定*/
+
+.article1 img {
+  background-color: #D4FBED;
+}
+
+/*その他*/
+
+.backtop {
+  text-align: right;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+/*aside部分*/
+
+.myself, .category{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  background-color: #FFFFFF;
+}
+.myself .image-position img {
+  width: 40%;
+  margin: 0 auto;
+}
+.myself .image-position {
+  text-align: center;
+  padding: 15px 0;
+}
+.myself h3 { 
+  padding-bottom: 0.5em;
+  font-size: larger;
+  text-align: center;
+}
+.twitter {
+  position: relative;
+}
+.twitter img {
+  position: absolute;
+  right: 60px;
+  bottom: 9px;
+}
+.myself .twitter img {
+  width: 30px;
+}
+.category a:hover {
+  text-decoration: none;
+}
+.category li:first-of-type{
+  border-top: solid 1px #777777;
+}
+.category li {
+  list-style: none;
+  margin-top: 0.2em;
+  padding: 0.3em 0;
+  opacity: 0.8;
+  border-bottom: solid 1px #777777;
+}
+.category li span {
+  padding-left: 1em;
+}
+
+/*footer部分*/
+
+footer p {
+  padding: 10px;
+  text-align: center;
+}
+
+/*レスポンシブ設定*/
+
+#phone {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 700px) {
+  .twitter img {
+    position: absolute;
+    right: 30px;
+    bottom: 9px;
+  }
+}
+
+@media screen and (max-width: 1150px) and (min-width: 480px) {
+  .contentwidth {
+    display: inline;
+  }
+  main {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+}
